@@ -36,7 +36,7 @@ function UserNumber(props: UserNumberProps) {
                 </div>
             )}
             {isMaxUsersReached && (
-                <Game users={props.users}/>
+                <Game users={props.users} setUsers={props.setUsers}/>
             )}
         </>
     );
