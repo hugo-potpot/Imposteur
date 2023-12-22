@@ -29,20 +29,22 @@ function UserGameItem(props: UserGameItemProps) {
     };
 
     return (
-        <li className="flex items-center justify-between border-b-2 border-gray-200 py-2">
-            <span>{props.user.name}</span>
-            <button
-                onClick={handleShowWord}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-                Show Words
-            </button>
-            <button
-                onClick={handleShowImposteur}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-                Show Imposteur
-            </button>
+        <li className="flex flex-col border-b-2 border-gray-200 py-4">
+            <span className="text-gray-800 mb-2">{props.user.name}</span>
+            <div className="flex flex-col">
+                <button
+                    onClick={handleShowWord}
+                    className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded mb-2 focus:outline-none"
+                >
+                    Montrer le mot
+                </button>
+                <button
+                    onClick={handleShowImposteur}
+                    className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none"
+                >
+                    Imposteur ?
+                </button>
+            </div>
             <CustomModal show={show} onHide={handleClose} text={modalContent} />
         </li>
     );

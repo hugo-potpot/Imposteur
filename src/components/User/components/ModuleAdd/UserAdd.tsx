@@ -36,22 +36,21 @@ function UserAdd(props: UserAddProps) {
 
 
     return (
-        <div className="flex items-center space-x-2">
+        <div className="flex flex-col items-center">
             <input
-                className="border-2 border-black px-3 py-2 rounded"
+                className="border-2 border-gray-400 px-3 py-2 rounded"
                 value={name}
                 type="text"
-                placeholder="Name"
+                placeholder="Nom du joueur"
                 onChange={handleNameChange}
-                onKeyDown={handleKeyPress} // Gestionnaire pour la touche "Entrée"
-
+                onKeyDown={handleKeyPress}
             />
-                <button
-                    onClick={handleAddUser}
-                    className="px-4 py-2 border-2 border-black rounded bg-blue-500 text-white hover:bg-blue-600 transition-colors"
-                >
-                    Add User
-                </button>
+            <button
+                onClick={handleAddUser}
+                className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded transition-colors mt-4"
+            >
+                Ajouter
+            </button>
         </div>
     );
 }
